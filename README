@@ -26,7 +26,7 @@ python eval_image_classifierV1.py \
     --num_classes=101 \
     --model_name=inception_v3
 --dataset_dir为验证（测试）tfrecord文件的存放位置
-
+val.py为多张照片测试脚本drawing里面存放要测试的照片
  python val.py \
     --checkpoint_path=/home/kyz/tensorflow/main/180504/weights/model.ckpt-200000 \
     --test_dir=/home/kyz/tensorflow/main/180429/slim/drawing 
