@@ -1,0 +1,59 @@
+python train_image_classifierV1.py \
+    --train_dir=weights \
+    --dataset_dir=train \
+    --num_samples=3320 \
+    --num_classes=101 \
+    --labels_to_names_path=labels.txt \
+    --model_name=inception_v3 \
+    --checkpoint_path=inception_v3/inception_v3.ckpt \
+    --checkpoint_exclude_scopes=InceptionV3/Logits,InceptionV3/AuxLogits \
+    --trainable_scopes=InceptionV3/Logits,InceptionV3/AuxLogits
+--model_name 为模型名称你可以换用slim提供的其他模型
+如果不需要预训练请使用一下指令
+python train_image_classifierV1.py \
+    --train_dir=weights \
+    --dataset_dir=train \
+    --num_samples=3320 \
+    --num_classes=101 \
+    --labels_to_names_path=labels.txt \
+    --model_name=inception_v3 \
+
+python eval_image_classifierV1.py \
+    --checkpoint_path=weights \
+    --eval_dir=eval \
+    --dataset_dir=val \
+    --num_samples=350 \
+    --num_classes=101 \
+    --model_name=inception_v3
+--dataset_dir为验证（测试）tfrecord文件的存放位置
+
+ python val.py \
+    --checkpoint_path=/home/kyz/tensorflow/main/180504/weights/model.ckpt-200000 \
+    --test_dir=/home/kyz/tensorflow/main/180429/slim/drawing 
+
+
+tensorboard --logdir=weights
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,2 @@
+该文件夹存放照片数据集，每一个类别的照片用一个文件夹保存，文件夹命名为类别的名字。
+This folder holds the photo dataset, and each category of photos is saved in a folder named the name of the category.
